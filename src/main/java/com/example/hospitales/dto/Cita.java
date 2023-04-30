@@ -9,6 +9,6 @@ public class Cita {
     private Long idCita;
     private LocalDateTime fechaInicio;
     private LocalDateTime fechaFin;
-    private Long NSSPaciente;
+    private Long nssPaciente;
     private Long cedulaMedico;
 }
