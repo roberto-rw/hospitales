@@ -28,6 +28,15 @@ public class HospitalesService {
         return Arrays.asList(objects);
     }
 
+    public List<Cita> getCitasMedico(RequestDTO request){
+        String medico= request.getCedulaMedico();
+        String url= getURLHospital(request.getNombreHospital());
+        url= url+"/"+medico;
+        ResponseEntity<Cita[]> responseEntity= restTemplate.getForEntity(url, Cita[].class);
+        Cita[] objetos= responseEntity.getBody();
+        return Arrays.asList(objetos);
+    }
+
     public String getURLHospital(String nombre){
         List<Hospital> hospitales = hospitalesRepository.findHospitalByNombre(nombre);
         Hospital hospital = hospitales.get(0);

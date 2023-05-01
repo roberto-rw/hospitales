@@ -6,5 +6,5 @@ import lombok.Data;
 public class RequestDTO {
     private String nombreHospital;
     private String cedulaMedico;
-    private String ssdPaciente;
+    private String nssPaciente;
 }

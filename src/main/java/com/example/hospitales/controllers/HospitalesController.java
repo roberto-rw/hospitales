@@ -19,4 +19,7 @@ public class HospitalesController {
     public List<Cita> getCitas(@RequestBody RequestDTO body){
         return hospitalesService.getCitas(body);
     }
+
+    @GetMapping("/citas-medico")
+    public List<Cita> getCitasMedico(@RequestBody RequestDTO body){return hospitalesService.getCitasMedico(body);}
 }
