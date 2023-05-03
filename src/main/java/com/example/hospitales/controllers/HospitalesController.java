@@ -9,14 +9,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 public class HospitalesController {
 
     @Autowired
     HospitalesService hospitalesService;
+    
     @GetMapping("/citas")
-    public List<Cita> getCitas(@RequestBody RequestDTO body){
+    public List<Cita> getCitas(@RequestParam String nombreHospital, @RequestParam String cedulaMedico){
+        RequestDTO body = new RequestDTO(nombreHospital, cedulaMedico);
         return hospitalesService.getCitas(body);
     }
 
