@@ -4,12 +4,9 @@ import com.example.hospitales.dto.Cita;
 import com.example.hospitales.dto.RequestDTO;
 import com.example.hospitales.services.HospitalesService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 public class HospitalesController {

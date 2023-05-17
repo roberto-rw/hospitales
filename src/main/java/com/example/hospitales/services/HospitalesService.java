@@ -23,6 +23,7 @@ public class HospitalesService {
 
     public List<Cita> getCitas(RequestDTO request) {
         String url = getURLHospital(request.getNombreHospital());
+        System.out.println(url);
         ResponseEntity<Cita[]> responseEntity = restTemplate.getForEntity(url, Cita[].class);
         Cita[] objects = responseEntity.getBody();
         return Arrays.asList(objects);
